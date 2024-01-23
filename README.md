@@ -2,7 +2,7 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2024-01-23 23:52:26
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-01-24 00:39:31
+ * @LastEditTime: 2024-01-24 00:47:17
  * @FilePath: /TSFamily/README.md
  * @Description: 
  * 
@@ -66,5 +66,8 @@ hey~，我是科科，目前就职于国内一家互联网公司，你们可以�
 - [TypeScript 官网](https://www.typescriptlang.org)
 - [TypeScript 开发实战](https://time.geekbang.org/course/intro/100032201)
 - [波波微课](https://www.bilibili.com/video/BV1ka4y1u79g)
-
+## star
+[![Stargazers over time](https://starchart.cc/shgopher/TSFamily.svg)](https://starchart.cc/shgopher/TSFamily)
+## 证书
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">知识共享署名 3.0 未本地化版本许可协议</a>进行许可。
  

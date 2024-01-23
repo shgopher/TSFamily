@@ -2,7 +2,7 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2023-05-06 12:20:49
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-01-24 00:41:20
+ * @LastEditTime: 2024-01-24 00:43:18
  * @FilePath: /TSFamily/changelog.config.js
  * @Description: 
  * 
@@ -15,7 +15,7 @@ module.exports = {
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
-  scopes: ['ts','vue','react','nextjs','nodejs','redux','webpack','tailwind','headless'],
+  scopes: ['ts','vue','react','nextjs','nodejs','redux','webpack','tailwind','headless','all','root'],
   types: {
     chore: {
       description: 'Build process or auxiliary tool changes',
