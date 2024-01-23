@@ -2,7 +2,7 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2024-01-23 23:52:26
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-01-24 00:47:17
+ * @LastEditTime: 2024-01-24 01:13:47
  * @FilePath: /TSFamily/README.md
  * @Description: 
  * 
@@ -39,6 +39,7 @@ hey~，我是科科，目前就职于国内一家互联网公司，你们可以�
 - [泛型](./ts/泛型/README.md)
 - [模块](./ts/模块/README.md)
 - [声明合并](./ts/声明合并/README.md)
+- [并发编程](./ts/并发编程/README.md)
 - [tsconfig](./ts/tsconfig/README.md)
 - [编译工具](./ts/编译工具/README.md)
 - [代码检查工具](./ts/代码检查工具/README.md)
