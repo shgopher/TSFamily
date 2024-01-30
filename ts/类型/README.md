@@ -171,19 +171,33 @@ any 类型对应的安全类型，unkown 类型的变量只能被赋值给 any �
 枚举类型
 ```ts
   enum Color {
-    Red,
-    Blue,
-    Green
+    Red= "r",
+    Blue ="b" ,
+    Green="g",
   }
   let c: Color = Color.Red
-  // 设置 enum 类型初始值
+  // 设置 enum 类型初始值,
   enum Color1 {
-    Red = 1,
-    Blue = 2,
-    Green = 3
+    Red = 1,// 依次递增
+    Blue ,
+    Green ,
   }
   let c1: Color1 = Color1.Red
 ```
+```ts
+interface a{
+  v :string
+}
+interface b {
+  x:number
+}
+enum shark {
+  a,
+  b,
+}
+// 这种用法就跟go中的组合一个意思了
+```
+
 ### Union Types
 联合类型
 ```ts
