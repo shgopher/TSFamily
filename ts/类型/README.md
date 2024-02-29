@@ -132,17 +132,25 @@ ts 所拥有的基本类型如下：
   }
   ```
 ### never
-never 类型表示的是那些永不存在的值的类型
+never 类型表示的是那些永不存在的值的类型，
+
+never 的概念在 go 中并没有被提及，它是所有类型的子类型，也就是说，任何类型都不能赋值给 never 类型
   ```ts
   function error(message: string): never {
-    throw new Error(message);
+    throw new Error(message)
     }
   ```
+下面这个函数的返回值就是 never，因为它永远都没有返回值
 ### any
+any 可以接受任意类型的值，这跟 go 语言的 any 是一个意思
+
+any 和下文提到的 unknown 都属于顶层类型，也就是说能接受所有类型的父类型，这跟 go 的定义也是一样的
+
 表示 any 类型，可以容纳所有值
   ```ts
   let a: any = 123
   ```
+例如这里的 123 会被认为是 number 类型，但是，如果使用了 any 类型，那么，123 会被认为是 any 类型
 ### unknown
 any 类型对应的安全类型，unkown 类型的变量只能被赋值给 any 类型和 unknow 类型
   ```ts
@@ -151,7 +159,17 @@ any 类型对应的安全类型，unkown 类型的变量只能被赋值给 any �
   a = true
   ```
 
-其中，any unknown 类型是要慎重使用的，如果使用了 any 就跟没有使用类型一个意思了。
+unknown 跟 any 不一样，在操作 unknown 类型的时候，必须进行断言，不断言不能进行操作
+```ts
+let u:unkown = 12
+
+// ❌
+u.fool()
+
+// 必须进行断言才可以操作
+// ✅
+(u as number).fool()
+```
 ## 复杂类型
 ### array
 数组类型
