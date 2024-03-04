@@ -29,7 +29,7 @@ function age(){
 }
 age()
 ```
-所以，在 ts 中，不要使用 var 作为变量声明，除非你有特殊需求
+所以，在 ts 中，不要使用 var 作为变量声明，除非你有特殊需求 0
 ## 常量
 常量就比较常规了：
 ```ts
@@ -46,7 +46,7 @@ ts 中，类型需要初始化，跟 go 等编程语言，声明就是初始化�
 let a : number = 0
 // go
 var a int
-```
+``` 
 ## 基础类型
 ts 所拥有的基本类型如下：
 
@@ -259,7 +259,7 @@ age("124")
 ## 类型别名
 类型别名，给一个类型起另外一个名字
 
-在 ts 中类似接口的概念，但是它可以作用于原始值，联合类型，以及交叉类型等任何类型
+它可以作用于原始值，联合类型，以及交叉类型等任何类型
 
 ```ts
 type aliasBool = boolean
@@ -268,6 +268,233 @@ function age():void{
   let b:aliasBool = true
 }
 age()
+```
+## 高级类型
+### 映射类型
+在编译时转换已知类型的属性并且创建一个新的类型，可以对已知类型的属性进行转换修改或者添加，比如将属性变成只读类型或者可选类型
+```ts
+type NewType = {
+  [Property in keyof ExistingType]:TransformType;
+}
+```
+- NewType 是要创建的新类型
+- property 是 ExistingType 的键
+- TransformType 是对应属性的转换类型
+
+例如我们看一下实例：
+```ts
+type Readonly<T> = {
+  readonly [P in keyof T]:T[P];
+}
+```
+```ts
+// 接口
+interface People {
+  name:string;
+  age:number;
+}
+// 类型别名
+type ReadonlyPerson = Readonly<People>
+const person:ReadonlyPerson = {
+  name:"123",
+  age:123,
+}
+```
+- Partial 内置映射类型，将属性变成可选
+  ```ts
+  type Partial<T> = {
+    [P in keyof T]?:T[P];
+  }
+  ```
+- Pick 从执行类型中选择一部分创建新类型
+  ```ts
+  type Pick<T,K extends keyof T> = {
+    [P in K]:T[P];
+    }
+  ```
+  ```ts
+  interface Person {
+  name: string;
+  age: number;
+  occupation: string;
+  }
+
+  type PersonInfo = Pick<Person, "name" | "age">;
+
+  const info: PersonInfo = {
+  name: "John",
+  age: 30,
+  };
+
+  ```
+### 条件类型
+```ts
+T extends U ? X : Y
+```
+T 是待检查的类型，U 是条件类型，X 是满足条件时返回的类型，Y 是不满足条件时返回的类型。条件类型通常与泛型一起使用，以便根据不同的类型参数值进行类型推断和转换。
+
+
+
+### 模版字面量类型
+```ts
+type Greeting<T extends string> = `Hello, ${T}!`;
+
+type GreetingWorld = Greeting<'World'>;  // GreetingWorld的类型为"Hello, World!"
+```
+## 类型断言
+如果想告诉编译器类型推断的意图，我们可以直接断言
+```ts
+let value = "Hello, World!"
+let length = (value as string).length
+```
+## 类型守卫
+类型守卫用在运行时检查变量的类型，并缩小变量类型的范围，类型收窄可以让 ts 编译器更好的理解代码的意图
+### typeof 类型守卫
+```ts
+function printbValue(value:string | number){
+  // 我们发现其实 value 是联合类型，类型还不够窄，我们可以使用typeof 进一步缩短
+  if(typeof value === "string"){
+    console.log(value.length)
+  }else {
+    console.log(value)
+  }
+}
+```
+### instanceof 类型守卫
+instanceof 类型守卫，可以用来判断某个值是否为某个类的实例
+
+```ts
+class Animal {
+  move(){
+    console.log("Animal is moving")
+  }
+}
+class Dog extends Animal {
+  bark(){
+    console.log("Dog is barking")
+  }
+}
+func printDogValue(animal:Animal){
+  if (animal instanceof Dog){
+    animal.bark()
+  }else {
+    animal.move()
+  }
+}
+```
+### 自定义谓词函数类型守卫
+```ts
+interface Circle{
+  kind:'Circle';
+  radius: number;
+}
+interface Rectangle{
+  kind:'Rectangle';
+}
+type Shaple = Circle | Rectangle
+
+function calculateArea(shape: Shape) {
+  if (isCircle(shape)) {
+    console.log(Math.PI * shape.radius ** 2);
+  } else {
+    console.log(shape.width * shape.height);
+  }
+}
+
+// 其中这一句 shape is Circle 是一个断言，也是告诉编译器我们要检查的是shap的类型
+//TypeScript 编译器会根据这个返回值类型断言推断调用此函数后的变量就是 Circle 类型，
+// 增强了编译时类型检查的安全性。
+function isCircle(shape: Shape): shape is Circle {
+  return shape.kind === 'circle';
+}
+```
+### 联合类型守卫
+这个跟 go 的 switch 断言语句类似
+
+```ts
+interface Car {
+  type: 'car';
+  brand: string;
+  wheels: number;
+}
+
+interface Bicycle {
+  type: 'bicycle';
+  color: string;
+}
+
+interface Motorcycle {
+  type: 'motorcycle';
+  engine: number;
+}
+
+type Vehicle = Car | Bicycle | Motorcycle;
+
+function printVehicleInfo(vehicle: Vehicle) {
+  switch (vehicle.type) {
+    case 'car':
+      console.log(`Brand: ${vehicle.brand}, Wheels: ${vehicle.wheels}`);
+      break;
+    case 'bicycle':
+      console.log(`Color: ${vehicle.color}`);
+      break;
+    case 'motorcycle':
+      console.log(`Engine: ${vehicle.engine}`);
+      break;
+    default:
+      const _exhaustiveCheck: never = vehicle;
+  }
+}
+```
+### in 操作符进行类型守卫
+in 判断某个属性是否在某个类型中
+```ts
+interface Circle {
+  kind: 'circle';
+  radius: number;
+}
+
+interface Rectangle {
+  kind: 'rectangle';
+  width: number;
+  height: number;
+}
+
+type Shape = Circle | Rectangle;
+
+function printArea(shape: Shape) {
+  if ('radius' in shape) {
+    console.log(Math.PI * shape.radius ** 2);
+  } else {
+    console.log(shape.width * shape.height);
+  }
+}
+```
+### 真值类型守卫
+当条件表达式的结果是 true 的时候，收窄类型
+```ts
+function isV(value:string|null){
+  if (value){
+    console.log(value.length)
+  }else{
+    console.log('value is null')
+  }
+}
+```
+### 自定义类型判断守卫
+```ts
+interface Bird {
+  fly(): void;
+}
+
+interface Fish {
+  swim(): void;
+}
+
+// 最后的一句是断言语句，同时它也是一个布尔类型
+function isBird(animal: Bird | Fish): animal is Bird {
+  return (animal as Bird).fly !== undefined;
+}
 ```
 ## 参考资料
 - https://typescriptlang.org
