@@ -2,7 +2,7 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2024-01-24 00:19:32
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-03-06 17:16:30
+ * @LastEditTime: 2024-03-06 17:45:56
  * @FilePath: /TSFamily/ts/泛型/README.md
  * @Description: 
  * 
@@ -147,3 +147,76 @@ const people:NewPerso = {
 } 
 
 ```
+### Exclude <T,U>
+Exclude 的一个常见用例是在操作联合类型时，从联合类型中排除某些特定的类型
+
+`Exclude<T, U>` 是 TypeScript 提供的一个内置的条件类型，用于从联合类型 `T` 中排除所有可以赋值给 `U` 的类型。换句话说，它会创建一个新的类型，该类型包含 `T` 中所有不能赋值给 `U` 的类型。
+
+**语法**
+
+```typescript
+type Exclude<T, U>
+```
+
+**示例**
+
+假设我们有以下类型定义：
+
+```typescript
+type A = 'x' | 'y';
+type B = 'x' | 'z';
+```
+
+我们可以使用 `Exclude` 从类型 `A` 中排除 `B` 中存在的类型：
+
+```typescript
+type C = Exclude<A, B>; // 'y'
+```
+
+在这个例子中，`C` 的类型是 `'y'`，因为 `'x'` 可以赋值给 `B`，所以被排除了。
+
+我们还可以排除任何其他类型，比如基本类型或对象类型：
+
+```typescript
+type D = Exclude<string | number | (() => void), Function>; // string | number
+```
+
+在这里，`D` 的类型是 `string | number`，因为 `() => void` 是一个 `Function` 类型，所以被排除了。
+
+`Exclude` 的一个常见用例是在操作联合类型时，从联合类型中排除某些特定的类型。比如，我们可以使用它来创建一个新的类型，该类型包含了除了某些特定类型之外的所有类型。
+
+```typescript
+type NonNullable<T> = Exclude<T, null | undefined>;
+```
+
+在这个例子中，`NonNullable` 是一个条件类型，它从类型 `T` 中排除 `null` 和 `undefined`，从而创建一个新的类型，该类型不包含 `null` 和 `undefined`。
+
+总之，`Exclude` 是一个非常有用的工具类型，它可以帮助我们在处理联合类型时更加灵活和方便。
+### Omit<T，K>
+内置泛型，用于从类型 T 中排除 U
+
+```ts
+interface People {
+  name:string;
+  age:number;
+  address:string;
+}
+
+type NewPerso = Omit<People,'name' | 'age'>
+
+const p:NewPerso = {
+  address:'shgopher',
+}
+```
+### Readonly<T>
+
+```ts
+interface People {
+  name:string;
+  age:number;
+  address:string;
+}
+
+type ReadOnly = Readonly<People>
+```
+将属性变成只读

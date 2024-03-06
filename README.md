@@ -2,7 +2,7 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2024-01-23 23:52:26
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-03-05 22:49:47
+ * @LastEditTime: 2024-03-06 17:50:37
  * @FilePath: /TSFamily/README.md
  * @Description: 
  * 
@@ -37,6 +37,10 @@ hey~，我是科科，目前就职于国内一家互联网公司，你们可以�
 - [函数](./ts/函数/README.md)
 - [类](./ts/类/README.md)
 - [泛型](./ts/泛型/README.md)
+- [鸭子理论](./ts/ts鸭子理论/README.md)
+- [协变逆变](./ts/协变逆变/README.md)
+- [扩展类型定义](./ts/扩展类型定义/README.md)
+- [装饰器](./ts/装饰器/README.md)
 - [模块](./ts/模块/README.md)
 - [声明合并](./ts/声明合并/README.md)
 - [并发编程](./ts/并发编程/README.md)
