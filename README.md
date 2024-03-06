@@ -2,7 +2,7 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2024-01-23 23:52:26
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-03-03 23:44:26
+ * @LastEditTime: 2024-03-05 22:49:47
  * @FilePath: /TSFamily/README.md
  * @Description: 
  * 
@@ -45,7 +45,9 @@ hey~，我是科科，目前就职于国内一家互联网公司，你们可以�
 - [代码检查工具](./ts/代码检查工具/README.md)
 - [单元测试](./ts/单元测试/README.md)
 - [ArkTS](./ts/arkts/README.md)
-- [原生 js](./ts/js/README.md)
+## 原生 js
+- [js 基础](./js/js基础/README.md)
+- [并发](./js/并发/README.md)
 ## react
 ## vue
 ## next.js

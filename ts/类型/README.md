@@ -347,6 +347,131 @@ type GreetingWorld = Greeting<'World'>;  // GreetingWorld的类型为"Hello, Wor
 let value = "Hello, World!"
 let length = (value as string).length
 ```
+## 类型判定
+```ts
+T extends U ? x : y
+
+type Check<T> = T extends string ? true : false
+```
+判断 t 是否是 string，如果是就返回 true 否则就是 false
+
+### 属性判断 keyof
+```ts
+interface People {
+  name: string;
+  age: number;
+}
+type PeopleKeys = keyof People
+```
+### infer
+```ts
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never;
+
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+type AddReturnValue = ReturnType<typeof add>;  // 类型为 number
+
+```
+在上面的示例中，ReturnType 类型接受一个类型参数 T，并使用条件类型和 infer 关键字推断函数类型的返回类型。通过调用 ReturnType<typeof add>，我们推断出 add 函数的返回类型为 number。
+
+
+在 TypeScript 中，`infer` 关键字用于在条件类型中推断类型。它主要用于提取某些复杂类型中的部分类型。
+
+例如，你有一个类型 `Foo<T>`，你想提取出 `T` 的类型。你可以这样做：
+
+```typescript
+type ExtractFoo<T> = T extends Foo<infer U> ? U : never;
+```
+
+这里的 `infer U` 会尝试推断 `Foo<U>` 中的 `U` 的类型，如果 `T` 可以被赋值为 `Foo<U>` 的形式，那么 `ExtractFoo<T>` 就是 `U` 的类型，否则为 `never`。
+
+`infer` 还可以用于其他场景，比如提取函数返回值类型、提取 Promise 值的类型等。例如：
+
+```typescript
+// 提取函数返回值类型
+type FnReturnType<T extends (...args: any[]) => any >= T extends (...args: any[]) => infer R ? R : never;
+
+// 提取Promise值的类型
+type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+```
+
+总的来说，`infer` 关键字使得在条件类型中推断和提取嵌套类型变得更加方便和清晰。它增强了 TypeScript 的类型系统能力，让我们可以更好地控制和操作复杂的类型。
+
+给出一个案例：
+```ts
+// 定义泛型接口 Foo
+interface Foo<T> {
+  value: T;
+}
+
+// 使用 infer 提取 Foo 中的类型 T
+type ExtractFoo<T> = T extends Foo<infer U> ? U : never;
+
+// 举例
+type FooString = Foo<string>; // { value: string }
+type ExtractedString = ExtractFoo<FooString>; // string
+
+type FooNumber = Foo<number>; // { value: number }
+type ExtractedNumber = ExtractFoo<FooNumber>; // number
+
+type FooObject = Foo<{ name: string }>; // { value: { name: string } }
+type ExtractedObject = ExtractFoo<FooObject>; // { name: string }
+
+// 无法提取的情况
+type NotFoo = { value: string }; // 不是 Foo 类型
+type FailedExtraction = ExtractFoo<NotFoo>; // never
+```
+可以看到实际上是获取的底层的基础数据类型
+### extends 的含义
+
+在 TypeScript 中，`extends` 关键字有两个主要用途：
+
+1. **用于类继承**
+
+在面向对象编程中，`extends` 用于类继承，允许子类继承父类的属性和方法。例如：
+
+```typescript
+class Animal {
+  move() {
+    console.log("Moving...");
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("Woof!");
+  }
+}
+
+let dog = new Dog();
+dog.move(); // 输出 "Moving..."
+dog.bark(); // 输出 "Woof!"
+```
+
+在这个例子中，`Dog` 类通过 `extends Animal` 继承了 `Animal` 的 `move` 方法。
+
+2. **用于条件类型**
+
+在 TypeScript 的条件类型中，`extends` 用于检查一个类型是否可以赋值给另一个类型。它的语法是：
+
+```
+extendsConstraintType ? TrueType : FalseType
+```
+
+如果类型参数满足约束类型 `ConstraintType`，则采用 `TrueType`，否则采用 `FalseType`。例如：
+
+```typescript
+type IsNumber<T> = T extends number ? "Yes" : "No";
+
+type A = IsNumber<5>; // "Yes"
+type B = IsNumber<string>; // "No"
+```
+
+在这个例子中，`IsNumber` 是一个条件类型，如果传入的类型参数 `T` 是 `number`，则结果是 `"Yes"`，否则是 `"No"`。
+
+通过条件类型和 `extends` 关键字，TypeScript 可以根据输入的类型执行不同的逻辑，从而实现更复杂和强大的类型操作。
 ## 类型守卫
 类型守卫用在运行时检查变量的类型，并缩小变量类型的范围，类型收窄可以让 ts 编译器更好的理解代码的意图
 ### typeof 类型守卫

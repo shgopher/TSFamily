@@ -2,7 +2,7 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2024-01-24 00:19:32
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-01-30 18:25:20
+ * @LastEditTime: 2024-03-06 17:16:30
  * @FilePath: /TSFamily/ts/泛型/README.md
  * @Description: 
  * 
@@ -97,4 +97,53 @@ Copy code
 class Generic<T> {}
 
 let g = new Generic()
+```
+
+ts 也有约束的泛型
+
+## extends 和类型约束
+
+```ts
+function printProperty<T extends { name: string }>(p: T) {
+  console.log(p.name)
+}
+```
+使用 extends 表示约束的内容，内容是属性叫做 name，name 的类型是 string
+
+下面是内置的泛型约束
+
+### Partial<T>
+
+将类型 T 的所有属性都转化为可选属性
+
+```ts
+interface People {
+  name: string;
+  age: number;
+}
+type mP = Partial<People>
+
+// 表示 age 属性是可选的
+const dd:mP = {
+  name: 'shgopher'
+}
+```
+### Required<T>
+将类型 T 的所有属性都转化为必需属性
+### Pick<T,K>
+从给定的 T 中选择指定的属性 K 组成一个新的类型
+
+```ts
+interface People {
+  name: string;
+  year:number;
+  address:string;
+}
+type NewPerso = Pick<People,'name'|'year'>
+
+const people:NewPerso = {
+  name: 'John',
+  year:2000,
+} 
+
 ```
