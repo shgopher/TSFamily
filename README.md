@@ -2,7 +2,7 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2024-01-23 23:52:26
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-03-06 17:50:37
+ * @LastEditTime: 2024-03-14 16:29:48
  * @FilePath: /TSFamily/README.md
  * @Description: 
  * 
@@ -53,12 +53,19 @@ hey~，我是科科，目前就职于国内一家互联网公司，你们可以�
 - [js 基础](./js/js基础/README.md)
 - [并发](./js/并发/README.md)
 ## react
+- [react 基础](./react/basic/README.md)
 ## vue
 ## next.js
 ## TailwindCss
+- [TailwindCss 安装](./tailwindcss/install/README.md)
+- [TailwindCss 基础](./tailwindcss/basic/README.md)
 ## Headless UI
+- [Headless UI 安装](./headlessui/install/README.md)
+- [Headless UI 基础](./headlessui/basic/README.md)
+- [Headless UI 结合 tailwind css 基础用法](./headlessui/headlessAndTailwindcss/README.md)
 ## Nodejs
 - [use ts](./nodejs/ts-node/README.md)
+- [npm 基础操作](./nodejs/npm/README.md)
 ## Redux
 ## webpack
 ## Rspack
