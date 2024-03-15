@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TSFamily - 前端程序员宝典</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="shortcut icon" type="image/x-icon" href="/TSFamily/favicon.ico">
+    <meta name="description" content="🔥 前端程序员宝典，包含了：ts，node，react，vue，next.js等一揽子知识体系">
+    
+    <link rel="preload" href="/TSFamily/assets/css/0.styles.5752bb95.css" as="style"><link rel="preload" href="/TSFamily/assets/js/app.83052095.js" as="script"><link rel="preload" href="/TSFamily/assets/js/2.526aabdc.js" as="script"><link rel="preload" href="/TSFamily/assets/js/1.fb0de850.js" as="script"><link rel="preload" href="/TSFamily/assets/js/38.f726dd39.js" as="script"><link rel="prefetch" href="/TSFamily/assets/js/10.0f940ce9.js"><link rel="prefetch" href="/TSFamily/assets/js/11.47db5ded.js"><link rel="prefetch" href="/TSFamily/assets/js/12.d5451a8e.js"><link rel="prefetch" href="/TSFamily/assets/js/13.fbb85f37.js"><link rel="prefetch" href="/TSFamily/assets/js/14.c303d081.js"><link rel="prefetch" href="/TSFamily/assets/js/15.b9998e58.js"><link rel="prefetch" href="/TSFamily/assets/js/16.381c1f06.js"><link rel="prefetch" href="/TSFamily/assets/js/17.00847b29.js"><link rel="prefetch" href="/TSFamily/assets/js/18.f274fc61.js"><link rel="prefetch" href="/TSFamily/assets/js/19.963a2a8e.js"><link rel="prefetch" href="/TSFamily/assets/js/20.e205e219.js"><link rel="prefetch" href="/TSFamily/assets/js/21.ffc7a95f.js"><link rel="prefetch" href="/TSFamily/assets/js/22.03a0cdbe.js"><link rel="prefetch" href="/TSFamily/assets/js/23.b7ffd3d2.js"><link rel="prefetch" href="/TSFamily/assets/js/24.5e9520f7.js"><link rel="prefetch" href="/TSFamily/assets/js/25.203815cb.js"><link rel="prefetch" href="/TSFamily/assets/js/26.57437a5c.js"><link rel="prefetch" href="/TSFamily/assets/js/27.0598221d.js"><link rel="prefetch" href="/TSFamily/assets/js/28.38232a10.js"><link rel="prefetch" href="/TSFamily/assets/js/29.66aed84b.js"><link rel="prefetch" href="/TSFamily/assets/js/3.9eb5c66d.js"><link rel="prefetch" href="/TSFamily/assets/js/30.290ceb70.js"><link rel="prefetch" href="/TSFamily/assets/js/31.0464c1da.js"><link rel="prefetch" href="/TSFamily/assets/js/32.a1afd53b.js"><link rel="prefetch" href="/TSFamily/assets/js/33.15151de8.js"><link rel="prefetch" href="/TSFamily/assets/js/34.c52c5a7f.js"><link rel="prefetch" href="/TSFamily/assets/js/35.b6f59f62.js"><link rel="prefetch" href="/TSFamily/assets/js/36.068395bd.js"><link rel="prefetch" href="/TSFamily/assets/js/37.c0318e66.js"><link rel="prefetch" href="/TSFamily/assets/js/39.a2dcc478.js"><link rel="prefetch" href="/TSFamily/assets/js/4.9dcf17a8.js"><link rel="prefetch" href="/TSFamily/assets/js/40.57079beb.js"><link rel="prefetch" href="/TSFamily/assets/js/41.911ab182.js"><link rel="prefetch" href="/TSFamily/assets/js/42.1d8a0126.js"><link rel="prefetch" href="/TSFamily/assets/js/43.59ae0506.js"><link rel="prefetch" href="/TSFamily/assets/js/44.dcffab01.js"><link rel="prefetch" href="/TSFamily/assets/js/45.2e1c9a0b.js"><link rel="prefetch" href="/TSFamily/assets/js/46.29caa69c.js"><link rel="prefetch" href="/TSFamily/assets/js/47.31454d8e.js"><link rel="prefetch" href="/TSFamily/assets/js/48.5e1862fb.js"><link rel="prefetch" href="/TSFamily/assets/js/49.cc47c871.js"><link rel="prefetch" href="/TSFamily/assets/js/5.3400a9c3.js"><link rel="prefetch" href="/TSFamily/assets/js/50.66beb206.js"><link rel="prefetch" href="/TSFamily/assets/js/51.bbcf049b.js"><link rel="prefetch" href="/TSFamily/assets/js/52.12fbafe7.js"><link rel="prefetch" href="/TSFamily/assets/js/53.fb2b71ee.js"><link rel="prefetch" href="/TSFamily/assets/js/54.9cbb1d94.js"><link rel="prefetch" href="/TSFamily/assets/js/6.0ddace00.js"><link rel="prefetch" href="/TSFamily/assets/js/7.beb1eb79.js"><link rel="prefetch" href="/TSFamily/assets/js/vendors~docsearch.bdc2fb18.js">
+    <link rel="stylesheet" href="/TSFamily/assets/css/0.styles.5752bb95.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TSFamily/" class="home-link router-link-active"><img src="https://avatars.githubusercontent.com/u/42873232" alt="TSFamily - 前端程序员宝典" class="logo"> <span class="site-name can-hide">TSFamily - 前端程序员宝典</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/TSFamily/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Menu" class="dropdown-title"><span class="title">系列教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="Menu" class="mobile-dropdown-title"><span class="title">系列教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/GOFamily/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GOFamily 【go语言教程】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/408/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  408  【基础408知识教程】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/luban/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  luban  【系统设计教程】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/dingdang/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  dingdang  【工具教程】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/god/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  god  【给程序员写的书】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://shgopher.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  作者
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/shgopher/TSFamily" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/TSFamily/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Menu" class="dropdown-title"><span class="title">系列教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="Menu" class="mobile-dropdown-title"><span class="title">系列教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/GOFamily/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GOFamily 【go语言教程】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/408/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  408  【基础408知识教程】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/luban/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  luban  【系统设计教程】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/dingdang/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  dingdang  【工具教程】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://shgopher.github.io/god/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  god  【给程序员写的书】
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://shgopher.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  作者
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/shgopher/TSFamily" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ts-config">ts config</h1> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token punctuation">{</span>
+  <span class="token comment">// 指定编译器将编译的TypeScript文件版本</span>
+  <span class="token string-property property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es6&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 指定生成哪个模块系统代码</span>
+  <span class="token string-property property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonjs&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 启用严格类型检查</span>
+  <span class="token string-property property">&quot;strict&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 允许编译未使用的本地变量或函数</span>
+  <span class="token string-property property">&quot;allowUnusedLabels&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 报告使用过的标签错误</span>
+  <span class="token string-property property">&quot;allowUnreachableCode&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 如果编译器检测到文件使用不同版本的库,就会发出警告</span>
+  <span class="token string-property property">&quot;alwaysStrict&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 是否检查周围文件,并记录视为错误的文件</span>
+  <span class="token string-property property">&quot;assumeChangesOnlyAffectDirectDependencies&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 当使用 --build 时,遇到出错则会终止</span>
+  <span class="token string-property property">&quot;baseUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不生成jspm程序包</span>
+  <span class="token string-property property">&quot;declaration&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 生成相应的 '.d.ts' 文件</span>
+  <span class="token string-property property">&quot;declarationDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./types&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// '.d.ts'文件输出目录</span>
+  <span class="token string-property property">&quot;diagnostics&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 显示诊断信息</span>
+  <span class="token string-property property">&quot;downlevelIteration&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 为for...of, spread, 和generator,生成ES5代码</span>
+  <span class="token string-property property">&quot;emitBOM&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 在输出文件开头加上BOM头(UTF-8 Byte Order Mark)</span>
+  <span class="token string-property property">&quot;emitDecoratorMetadata&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 给源码里的装饰器声明加上设计类型元数据</span>
+  <span class="token string-property property">&quot;experimentalDecorators&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 使用装饰器特性</span>
+  <span class="token string-property property">&quot;forceConsistentCasingInFileNames&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 禁止对同一个文件使用不一致的大小写</span>
+  <span class="token string-property property">&quot;importHelpers&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 引入tslib导入助手函数,编译后的JS文件体积会变小</span>
+  <span class="token string-property property">&quot;incremental&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 增量编译,一旦文件被编译过,就往osncreat文件里写一个记录文件</span>
+  <span class="token string-property property">&quot;inlineSourceMap&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 生成单个SourceMaps文件,而不是将每个文件 都生成 '.map' 文件</span>
+  <span class="token string-property property">&quot;inlineSources&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 将代码和sourceMap生成到一个文件</span>
+  <span class="token string-property property">&quot;isolatedModules&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 无条件的给没有导入语句的文件生成imports</span>
+  <span class="token string-property property">&quot;jsx&quot;</span><span class="token operator">:</span> <span class="token string">&quot;preserve&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 在'.tsx'文件里支持 JSX</span>
+  <span class="token string-property property">&quot;lib&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 编译工程所需要的库文件列表</span>
+  <span class="token string-property property">&quot;listEmittedFiles&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 打印出编译后被传出文件的路径</span>
+  <span class="token string-property property">&quot;listFiles&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 打印出编译文件及其源文件的名称</span>
+  <span class="token string-property property">&quot;maxNodeModuleJsDepth&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// node_modules依赖的编译失败时抛出错误</span>
+  <span class="token string-property property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonjs&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 指定生成哪个模块系统的代码</span>
+  <span class="token string-property property">&quot;moduleResolution&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 决定如何处理模块</span>
+  <span class="token string-property property">&quot;newLine&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lf&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 在生成文件时的当行符使用符号</span>
+  <span class="token string-property property">&quot;noEmit&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不生成输出文件</span>
+  <span class="token string-property property">&quot;noEmitHelpers&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不在输出文件中生成用户自己定义的帮助类</span>
+  <span class="token string-property property">&quot;noEmitOnError&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 发生错误时不生成输出文件</span>
+  <span class="token string-property property">&quot;noErrorTruncation&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不截短错误消息</span>
+  <span class="token string-property property">&quot;noFallthroughCasesInSwitch&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// switch语句是否报告fallthrough错误</span>
+  <span class="token string-property property">&quot;noImplicitAny&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 是否默认禁用any</span>
+  <span class="token string-property property">&quot;noImplicitReturns&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不是函数的根必须有返回值</span>
+  <span class="token string-property property">&quot;noImplicitThis&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 当this表示any类型时是否发出错误</span>
+  <span class="token string-property property">&quot;noImplicitUseStrict&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 模块是否创建命名空间</span>
+  <span class="token string-property property">&quot;noLib&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不加载默认库文件</span>
+  <span class="token string-property property">&quot;noResolve&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不把 /// &lt;reference``&gt;或模块导入的文件加到编译文件里</span>
+  <span class="token string-property property">&quot;noStrictGenericChecks&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 是否对没有设定默认值的泛型不适用双向协变/确变位检查</span>
+  <span class="token string-property property">&quot;noUnusedLocals&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 用于 阻止对命名代码的未使用本地的定义发出警告</span>
+  <span class="token string-property property">&quot;noUnusedParameters&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 用于 阻止对命名代码的未使用参数的定义发出警告</span>
+  <span class="token string-property property">&quot;outDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./dist&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 指定输出目录</span>
+  <span class="token string-property property">&quot;outFile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./dist/bundle.js&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 将程序编译为一个文件。</span>
+  <span class="token string-property property">&quot;paths&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 模块名映射，将模块重定向到另外一个路径</span>
+  <span class="token string-property property">&quot;plugins&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 要从编译器加载的插件列表</span>
+  <span class="token string-property property">&quot;preserveConstEnums&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 如何处理常量枚举,或为生成代码保留const枚举</span>
+  <span class="token string-property property">&quot;preserveSymlinks&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不把符号链接解析为其真实路径;应对于符号路径使用工具或者库</span>
+  <span class="token string-property property">&quot;preserveWatchOutputPath&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 保留监视输出文件夹的结构</span>
+  <span class="token string-property property">&quot;pretty&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 使用可读的相对路径</span>
+  <span class="token string-property property">&quot;project&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./tsconfig.json&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 编译工程的路径</span>
+  <span class="token string-property property">&quot;reactNamespace&quot;</span><span class="token operator">:</span> <span class="token string">&quot;React&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 为创建对React导入的指定JSX工厂覆盖以及生成命名空间声明</span>
+  <span class="token string-property property">&quot;removeComments&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 删除编译后的所有注释</span>
+  <span class="token string-property property">&quot;resolveJsonModule&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 使用webpack等导入器解析扩展名为.json的文件</span>
+  <span class="token string-property property">&quot;rootDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 仅用来控制输出的目录结构 --outDir</span>
+  <span class="token string-property property">&quot;rootDirs&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 根文件夹列表</span>
+  <span class="token string-property property">&quot;skipDefaultLibCheck&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 忽略所有的声明文件的类型检查</span>
+  <span class="token string-property property">&quot;skipLibCheck&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 是否忽略目录下所有的声明文件的类型检查</span>
+  <span class="token string-property property">&quot;sourceMap&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 生成相应的.map文件</span>
+  <span class="token string-property property">&quot;sourceRoot&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 指定TypeScript源文件目录</span>
+  <span class="token string-property property">&quot;strictBindCallApply&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 对bind/call/apply监视严格</span>
+  <span class="token string-property property">&quot;strictNullChecks&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 设置为true,null和undefined值不能赋给非这两种类型的变量</span>
+  <span class="token string-property property">&quot;stripInternal&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 不对内部代码用strip处理</span>
+  <span class="token string-property property">&quot;suppressExcessPropertyErrors&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 阻止&quot;不同代码单元引用互不可见的类型检查器符号&quot;错误</span>
+  <span class="token string-property property">&quot;suppressImplicitAnyIndexErrors&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+
+  <span class="token comment">// 阻止&quot;缺少索引签名&quot;错误</span>
+  <span class="token string-property property">&quot;traceResolution&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 输出模块和目录的策略现场数据</span>
+  <span class="token string-property property">&quot;tsBuildInfoFile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 指定生成文件的存储目录</span>
+  <span class="token string-property property">&quot;typeRoots&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 包含类型声明的文件目录列表</span>
+  <span class="token string-property property">&quot;types&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 要包含的类型声明的文件名列表</span>
+  <span class="token string-property property">&quot;watch&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 在监听模式下运行编译器</span>
+  <span class="token string-property property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 打印编译器的版本</span>
+  <span class="token string-property property">&quot;lib&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;es5&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;es6&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;dom&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 需要使用的库文件列表</span>
+  <span class="token string-property property">&quot;jsx&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 指定JSX代码生成目标</span>
+  <span class="token string-property property">&quot;outFile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./dist/app.js&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 将输出内容合并到一个文件</span>
+  <span class="token string-property property">&quot;allowJs&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 允许编译JS文件</span>
+  <span class="token string-property property">&quot;checkJs&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 在在 .js 文件中报告错误,与allowJS一起使用</span>
+  <span class="token string-property property">&quot;maxNodeModuleJsDepth&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 最大允许依赖的node_module依赖包</span>
+  
+  <span class="token string-property property">&quot;allowSyntheticDefaultImports&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">// 允许从没有默认导出的模块中默认导入</span>
+
+  <span class="token comment">// 指定要包含在编译中的文件或目录。</span>
+  <span class="token string-property property">&quot;include&quot;</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">&quot;src/**/*&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// 指定应排除在编译之外的文件或目录。</span>
+  <span class="token string-property property">&quot;exclude&quot;</span><span class="token operator">:</span> 
+    <span class="token punctuation">[</span>
+      <span class="token string">&quot;node_modules&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;**/*.spec.ts&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 将指定目录下的指定文件编译为一个命名空间</span>
+  <span class="token string-property property">&quot;composite&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span> 
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/shgopher/TSFamily/edit/release/ts/tsconfig/README.md" target="_blank" rel="noopener noreferrer">在GitHub中编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">3/11/2024, 3:12:57 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/TSFamily/assets/js/app.83052095.js" defer></script><script src="/TSFamily/assets/js/2.526aabdc.js" defer></script><script src="/TSFamily/assets/js/1.fb0de850.js" defer></script><script src="/TSFamily/assets/js/38.f726dd39.js" defer></script>
+  </body>
+</html>
