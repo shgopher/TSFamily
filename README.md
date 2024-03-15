@@ -56,6 +56,8 @@ hey~，我是科科，目前就职于国内一家互联网公司，你们可以�
 - [react 基础](./react/basic/README.md)
 ## vue
 ## next.js
+- [next.js 安装](./nextjs/install/README.md)
+- [next.js 基础](./nextjs/basic/README.md)
 ## TailwindCss
 - [TailwindCss 安装](./tailwindcss/install/README.md)
 - [TailwindCss 基础](./tailwindcss/basic/README.md)

@@ -2,13 +2,18 @@
  * @Author: shgopher shgopher@gmail.com
  * @Date: 2024-03-12 21:59:48
  * @LastEditors: shgopher shgopher@gmail.com
- * @LastEditTime: 2024-03-14 01:44:37
+ * @LastEditTime: 2024-03-16 00:26:44
  * @FilePath: /TSFamily/react/basic/README.md
  * @Description: 
  * 
  * Copyright (c) 2024 by shgopher, All Rights Reserved. 
 -->
 # react 基础
+## 使用脚手架安装 react
+
+```bash
+yarn create react-app my-app
+```
 ## 插值
 ```jsx
 // app.js
@@ -23,6 +28,34 @@ function App(){
   const listContent = list.map(item => (
       <li key={item.id}>{item.name}</li> // 在jsx中只要是变量嵌入到html中的情况，一律使用 {} 插值操作
   ))
+
+  const [tdata,setData] = useState(
+    [
+      {
+        title:'标题1',
+        data:'内容1'
+      },
+      {
+        title:'标题2',
+        data:'内容2'
+      },
+      {
+        title:'标题3',
+        data:'内容3'
+      }
+    ]
+  )
+  // 这里注意哦，省略了  return {} 这个东西 后面接的就是直接为返回值
+  // 所以原本应该是这样的
+
+  // tdata.map(function(item){
+  // return ( <li key={item.title}> {item.data}</li>)
+  //})
+  const myData = tdata.map(item=>(
+      <li key={item.title}> {item.data}</li>
+  ))
+
+
   let divPop = ''
 
   if (flag) {
@@ -43,7 +76,9 @@ function App(){
       {divContent}
       <hr/>
       {divPop}
-      
+      <ul>
+        {myData}
+      </ul>
       <ul>
         {listContent}
       </ul>
